@@ -28,8 +28,9 @@ class CRM
 		modify_contact if selection == 2
 		delete_contact if selection == 3
 		display_contact if selection == 4
-		display_by_attribute if selection == 5
-		exit if selection == 6
+		display_all if selection == 5
+		display_by_attribute if selection == 7
+		exit if selection == 7
 	end	
 
 	def main_menu
@@ -100,7 +101,8 @@ class CRM
 		puts "This contact has been deleted."
 	end
 
-
+	def display_all
+	 @rolodex.display_all
 
 
 	def display_contact
@@ -110,7 +112,7 @@ class CRM
 		print contact.to_s
 	end
 end
-
+end
 
 CRM.run
 

@@ -34,6 +34,12 @@ class Rolodex
 	def delete_contact(contact)
 	@contacts.delete(contact)
 	end
+
+	def display_all
+		@contacts.each do |contact|
+			puts contact.to_s
+		end
+	end
 end
 
 
