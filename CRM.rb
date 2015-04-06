@@ -16,7 +16,8 @@ class CRM
 		puts "[1] Add new contact"
 		puts "[2] Modify an existing contact"
 		puts "[3] Delete a contact"
-		puts "[4] Display all contacts"
+		puts "[4] Display a contact"
+		puts "[5] Display all contacts"
 		puts "[5] Display an attribute"
 		puts "[6] Exit"
 		puts "Enter a selection"
@@ -58,8 +59,8 @@ def display_contact
 
 	print "Enter id of user you'd like to see."
 	contact_id = gets.chomp.to_i
-	contact = @rolodex.find (contact_id)
-
+	contact = @rolodex.find(contact_id)
+	print contact
 end	
 
 CRM.run

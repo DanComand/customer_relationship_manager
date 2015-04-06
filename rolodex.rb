@@ -6,12 +6,12 @@ class Rolodex
 
 	def add_contact(contact)
 		contact.id = @id
-		@contacts << contacts
+		@contacts << contact
 		@id += 1
 	end
 
 	def find(contact_id)
-		@contact.find do |contact|
+		@contacts.find do |contact|
 			contact.id == contact.id			
 	end	
 end
