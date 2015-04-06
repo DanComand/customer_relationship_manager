@@ -14,4 +14,6 @@ class Contact
 		puts "Email: #{email}"
 		puts "Notes: #{notes}"
 	end
+
+	
 end
