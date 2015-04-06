@@ -12,7 +12,18 @@ class Rolodex
 
 	def find(contact_id)
 		@contacts.find do |contact|
-			contact.id == contact.id			
+			contact.id == contact_id			
+	end
+	end	
+
+	def modify_contact(contact_id)
+		@contacts.find do |contact|
+		contact.id == contact.id
+		if modify_contact2 == 1
+			first_name_changed = first_name.replace
+		elsif modify_contact2 == 2
+			last_name_
+		end			
 	end	
 end
 end

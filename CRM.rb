@@ -55,12 +55,50 @@ class CRM
 	end
 end
 
+def modify_contact
+	print "Enter the id of the contact you'd like to modify."
+	contact_id = gets.chomp.to_i
+	 contact = @rolodex.find(contact_id)
+	  puts contact.to_s
+	print "Do you want to modify #{contact_id}?"
+	confirm = gets.chomp.capitalize
+	if confirm == "Yes"
+		puts "Do you want to change [1]First name, [2]Last name, [3]Email, or [4]Notes of #{contact_id}."
+		user_choice = gets.chomp.to_i
+		if user_choice == 1
+			puts "Enter the new first name: "
+			contact.first_name = gets.chomp
+				puts contact.to_s
+		elsif user_choice == 2
+			puts "Enter the new last name: "
+			contact.last_name = gets.chomp
+		elsif user_choice == 3
+			puts "Enter the new email: "
+			contact.email = gets.chomp
+		elsif user_choice == 4
+			puts "Enter new notes: "
+			contact.notes = gets.chomp
+		end	
+
+
+
+	elsif user_choice == "n"
+		main_menu
+
+			
+
+end
+
+	end	
+
+
+
 def display_contact
 
 	print "Enter id of user you'd like to see."
 	contact_id = gets.chomp.to_i
 	contact = @rolodex.find(contact_id)
-	print contact
+	print contact.to_s
 end	
 
 CRM.run
